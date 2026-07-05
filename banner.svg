@@ -1,0 +1,193 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="55%" stop-color="#0B0F17"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="tinyBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="1500" height="500" fill="url(#bgGrad)"/>
+  <circle cx="250" cy="120" r="180" fill="url(#glowBlue)" filter="url(#softBlur)"/>
+  <circle cx="1150" cy="90" r="220" fill="url(#glowPurple)" filter="url(#softBlur)"/>
+  <circle cx="900" cy="420" r="200" fill="url(#glowCyan)" filter="url(#softBlur)"/>
+
+  <!-- TOP-LEFT CIRCUIT LINES -->
+  <g stroke="#06B6D4" stroke-opacity="0.28" stroke-width="1.4" fill="none">
+    <path d="M20 30 H120 L150 60 H230"/>
+    <path d="M20 70 H80 L100 90 H180 L200 70 H260"/>
+    <path d="M40 110 H140 L160 130 H210"/>
+    <circle cx="150" cy="60" r="3.5" fill="#06B6D4" fill-opacity="0.6" stroke="none"/>
+    <circle cx="100" cy="90" r="3.5" fill="#06B6D4" fill-opacity="0.6" stroke="none"/>
+    <circle cx="160" cy="130" r="3.5" fill="#06B6D4" fill-opacity="0.6" stroke="none"/>
+    <circle cx="230" cy="60" r="3.5" fill="#3B82F6" fill-opacity="0.6" stroke="none"/>
+  </g>
+
+  <!-- BOTTOM-LEFT PARTICLE WAVE MESH -->
+  <g opacity="0.55">
+    <g fill="#3B82F6">
+      <circle cx="30" cy="430" r="2"/><circle cx="60" cy="420" r="2.4"/><circle cx="90" cy="435" r="1.8"/>
+      <circle cx="120" cy="415" r="2.6"/><circle cx="150" cy="440" r="2"/><circle cx="180" cy="410" r="2.2"/>
+      <circle cx="210" cy="432" r="1.8"/><circle cx="240" cy="418" r="2.4"/>
+    </g>
+    <g fill="#6D5CF6">
+      <circle cx="45" cy="460" r="2.2"/><circle cx="75" cy="452" r="2"/><circle cx="105" cy="465" r="2.6"/>
+      <circle cx="135" cy="448" r="1.8"/><circle cx="165" cy="468" r="2.2"/><circle cx="195" cy="450" r="2"/>
+      <circle cx="225" cy="462" r="2.4"/><circle cx="255" cy="446" r="1.8"/>
+    </g>
+    <g fill="#8B5CF6">
+      <circle cx="60" cy="488" r="2"/><circle cx="90" cy="480" r="2.4"/><circle cx="120" cy="493" r="1.8"/>
+      <circle cx="150" cy="478" r="2.2"/><circle cx="180" cy="496" r="2"/><circle cx="210" cy="482" r="2.6"/>
+      <circle cx="240" cy="490" r="1.8"/><circle cx="270" cy="476" r="2.2"/>
+    </g>
+  </g>
+
+  <!-- NEURAL NETWORK BRAIN (abstract node graph) -->
+  <g transform="translate(760,90)">
+    <g stroke="url(#nodeGrad)" stroke-opacity="0.55" stroke-width="1.2" filter="url(#tinyBlur)">
+      <path d="M60 40 L140 20 L220 45 L260 100 L240 170 L180 210 L100 205 L40 160 L20 100 Z" fill="#06B6D4" fill-opacity="0.03"/>
+      <line x1="60" y1="40" x2="140" y2="20"/>
+      <line x1="140" y1="20" x2="220" y2="45"/>
+      <line x1="220" y1="45" x2="260" y2="100"/>
+      <line x1="260" y1="100" x2="240" y2="170"/>
+      <line x1="240" y1="170" x2="180" y2="210"/>
+      <line x1="180" y1="210" x2="100" y2="205"/>
+      <line x1="100" y1="205" x2="40" y2="160"/>
+      <line x1="40" y1="160" x2="20" y2="100"/>
+      <line x1="20" y1="100" x2="60" y2="40"/>
+      <line x1="60" y1="40" x2="140" y2="90"/>
+      <line x1="140" y1="20" x2="140" y2="90"/>
+      <line x1="140" y1="90" x2="220" y2="45"/>
+      <line x1="140" y1="90" x2="100" y2="150"/>
+      <line x1="100" y1="150" x2="40" y2="160"/>
+      <line x1="100" y1="150" x2="180" y2="210"/>
+      <line x1="140" y1="90" x2="240" y2="170"/>
+      <line x1="100" y1="150" x2="20" y2="100"/>
+      <line x1="140" y1="90" x2="260" y2="100"/>
+    </g>
+    <g fill="url(#nodeGrad)">
+      <circle cx="60" cy="40" r="4.5"/><circle cx="140" cy="20" r="5"/><circle cx="220" cy="45" r="4.5"/>
+      <circle cx="260" cy="100" r="5"/><circle cx="240" cy="170" r="4.5"/><circle cx="180" cy="210" r="5"/>
+      <circle cx="100" cy="205" r="4.5"/><circle cx="40" cy="160" r="5"/><circle cx="20" cy="100" r="4.5"/>
+      <circle cx="140" cy="90" r="7" filter="url(#tinyBlur)"/><circle cx="100" cy="150" r="6"/>
+    </g>
+  </g>
+
+  <!-- CODE PANEL -->
+  <g transform="translate(1120,60)">
+    <rect x="0" y="0" width="330" height="360" rx="14" fill="#111826" stroke="#233046" stroke-width="1.5"/>
+    <circle cx="24" cy="26" r="5" fill="#EF4444" fill-opacity="0.7"/>
+    <circle cx="44" cy="26" r="5" fill="#F59E0B" fill-opacity="0.7"/>
+    <circle cx="64" cy="26" r="5" fill="#22C55E" fill-opacity="0.7"/>
+    <g font-family="monospace" font-size="13">
+      <text x="24" y="66" fill="#8B5CF6">class</text>
+      <text x="70" y="66" fill="#F8FAFC">AIEngineer:</text>
+      <text x="40" y="90" fill="#8B5CF6">def</text>
+      <text x="70" y="90" fill="#06B6D4">__init__</text>
+      <text x="150" y="90" fill="#F8FAFC">(self):</text>
+      <text x="56" y="114" fill="#F8FAFC">self.skillset = [</text>
+      <text x="72" y="136" fill="#22D3AA">"Machine Learning",</text>
+      <text x="72" y="156" fill="#22D3AA">"Deep Learning",</text>
+      <text x="72" y="176" fill="#22D3AA">"Computer Vision",</text>
+      <text x="72" y="196" fill="#22D3AA">"LLMs",</text>
+      <text x="72" y="216" fill="#22D3AA">"MLOps"</text>
+      <text x="56" y="236" fill="#F8FAFC">]</text>
+      <text x="56" y="264" fill="#F8FAFC">self.passion =</text>
+      <text x="56" y="284" fill="#22D3AA">"Building intelligent</text>
+      <text x="72" y="302" fill="#22D3AA">systems"</text>
+      <text x="56" y="330" fill="#F8FAFC">self.mission =</text>
+      <text x="56" y="350" fill="#22D3AA">"Solve real problems"</text>
+    </g>
+  </g>
+
+  <!-- TECH BADGE GRID -->
+  <g transform="translate(770,320)" font-family="sans-serif" font-size="15" font-weight="600">
+
+    <!-- Python -->
+    <g transform="translate(0,0)">
+      <rect width="100" height="90" rx="12" fill="#0F172A" stroke="#233046"/>
+      <circle cx="50" cy="30" r="14" fill="#3B82F6"/>
+      <circle cx="50" cy="30" r="14" fill="#FACC15" fill-opacity="0.55"/>
+      <text x="50" y="70" fill="#CBD5E1" text-anchor="middle" font-size="12">Python</text>
+    </g>
+
+    <!-- TensorFlow -->
+    <g transform="translate(115,0)">
+      <rect width="100" height="90" rx="12" fill="#0F172A" stroke="#233046"/>
+      <path d="M50 16 L62 24 V38 L50 46 L38 38 V24 Z" fill="#F97316"/>
+      <text x="50" y="70" fill="#CBD5E1" text-anchor="middle" font-size="11">TensorFlow</text>
+    </g>
+
+    <!-- PyTorch -->
+    <g transform="translate(230,0)">
+      <rect width="100" height="90" rx="12" fill="#0F172A" stroke="#233046"/>
+      <path d="M50 15 C40 25 36 36 44 44 C52 52 62 46 61 36 C60 28 55 20 50 15 Z" fill="#EF4444"/>
+      <circle cx="50" cy="42" r="6" fill="none" stroke="#EF4444" stroke-width="2.5"/>
+      <text x="50" y="70" fill="#CBD5E1" text-anchor="middle" font-size="12">PyTorch</text>
+    </g>
+
+    <!-- FastAPI -->
+    <g transform="translate(0,105)">
+      <rect width="100" height="90" rx="12" fill="#0F172A" stroke="#233046"/>
+      <path d="M55 14 L38 38 H50 L45 56 L64 30 H52 Z" fill="#06B6D4"/>
+      <text x="50" y="70" fill="#CBD5E1" text-anchor="middle" font-size="11">FastAPI</text>
+    </g>
+
+    <!-- Docker -->
+    <g transform="translate(115,105)">
+      <rect width="100" height="90" rx="12" fill="#0F172A" stroke="#233046"/>
+      <g fill="#3B82F6">
+        <rect x="30" y="24" width="12" height="10"/>
+        <rect x="44" y="24" width="12" height="10"/>
+        <rect x="58" y="24" width="12" height="10"/>
+        <rect x="44" y="12" width="12" height="10"/>
+        <rect x="20" y="36" width="60" height="10" rx="2"/>
+      </g>
+      <text x="50" y="70" fill="#CBD5E1" text-anchor="middle" font-size="12">Docker</text>
+    </g>
+
+    <!-- Git -->
+    <g transform="translate(230,105)">
+      <rect width="100" height="90" rx="12" fill="#0F172A" stroke="#233046"/>
+      <circle cx="50" cy="20" r="5" fill="#F97316"/>
+      <circle cx="36" cy="42" r="5" fill="#F97316"/>
+      <circle cx="64" cy="42" r="5" fill="#F97316"/>
+      <path d="M50 20 V32 M36 42 H64" stroke="#F97316" stroke-width="2.5" fill="none"/>
+      <text x="50" y="70" fill="#CBD5E1" text-anchor="middle" font-size="14">Git</text>
+    </g>
+
+    <!-- OpenCV -->
+    <g transform="translate(115,0) translate(0,0)" opacity="0">
+      <!-- spacer (grid balanced at 6 items above) -->
+    </g>
+  </g>
+
+  <!-- BOTTOM ACCENT LINE -->
+  <rect x="0" y="497" width="1500" height="3" fill="url(#nodeGrad)"/>
+</svg>
